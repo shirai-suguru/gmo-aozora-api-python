@@ -3,29 +3,23 @@
 """
     GMO Aozora Net Bank Open API
 
-    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/business/service/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
+    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/api-cooperation/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
 
-    OpenAPI spec version: 1.1.12
+    OpenAPI spec version: 1.15.0
     
     Generated by: https://github.com/swagger-api/swagger-codegen.git
 """
-
 
 import pprint
 import re  # noqa: F401
 
 import six
 
-from ganb_corporate_client.models.transfer_detail import TransferDetail  # noqa: F401,E501
-from ganb_corporate_client.models.transfer_query_bulk_response import TransferQueryBulkResponse  # noqa: F401,E501
-
-
 class TransferStatusResponse(object):
     """NOTE: This class is auto generated by the swagger code generator program.
 
     Do not edit the class manually.
     """
-
     """
     Attributes:
       swagger_types (dict): The key is attribute name
@@ -53,7 +47,6 @@ class TransferStatusResponse(object):
 
     def __init__(self, acceptance_key_class=None, base_date=None, base_time=None, count=None, transfer_query_bulk_responses=None, transfer_details=None):  # noqa: E501
         """TransferStatusResponse - a model defined in Swagger"""  # noqa: E501
-
         self._acceptance_key_class = None
         self._base_date = None
         self._base_time = None
@@ -61,7 +54,6 @@ class TransferStatusResponse(object):
         self._transfer_query_bulk_responses = None
         self._transfer_details = None
         self.discriminator = None
-
         self.acceptance_key_class = acceptance_key_class
         self.base_date = base_date
         self.base_time = base_time
@@ -75,7 +67,7 @@ class TransferStatusResponse(object):
     def acceptance_key_class(self):
         """Gets the acceptance_key_class of this TransferStatusResponse.  # noqa: E501
 
-        照会対象キー区分 半角数字 リクエストしたときと同じ内容 照会対象のキー 1：振込申請照会対象指定、2：振込一括照会対象指定   # noqa: E501
+        照会対象キー区分<br>半角数字<br>リクエストしたときと同じ内容<br>照会対象のキー<br>1：振込申請照会対象指定、2：振込一括照会対象指定<br>  # noqa: E501
 
         :return: The acceptance_key_class of this TransferStatusResponse.  # noqa: E501
         :rtype: str
@@ -86,17 +78,13 @@ class TransferStatusResponse(object):
     def acceptance_key_class(self, acceptance_key_class):
         """Sets the acceptance_key_class of this TransferStatusResponse.
 
-        照会対象キー区分 半角数字 リクエストしたときと同じ内容 照会対象のキー 1：振込申請照会対象指定、2：振込一括照会対象指定   # noqa: E501
+        照会対象キー区分<br>半角数字<br>リクエストしたときと同じ内容<br>照会対象のキー<br>1：振込申請照会対象指定、2：振込一括照会対象指定<br>  # noqa: E501
 
         :param acceptance_key_class: The acceptance_key_class of this TransferStatusResponse.  # noqa: E501
         :type: str
         """
         if acceptance_key_class is None:
             raise ValueError("Invalid value for `acceptance_key_class`, must not be `None`")  # noqa: E501
-        if acceptance_key_class is not None and len(acceptance_key_class) > 1:
-            raise ValueError("Invalid value for `acceptance_key_class`, length must be less than or equal to `1`")  # noqa: E501
-        if acceptance_key_class is not None and len(acceptance_key_class) < 1:
-            raise ValueError("Invalid value for `acceptance_key_class`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._acceptance_key_class = acceptance_key_class
 
@@ -104,7 +92,7 @@ class TransferStatusResponse(object):
     def base_date(self):
         """Gets the base_date of this TransferStatusResponse.  # noqa: E501
 
-        基準日 半角文字 振込照会明細情報を照会した基準日を示します YYYY-MM-DD形式   # noqa: E501
+        基準日<br>半角文字<br>振込照会明細情報を照会した基準日を示します<br>YYYY-MM-DD形式<br>  # noqa: E501
 
         :return: The base_date of this TransferStatusResponse.  # noqa: E501
         :rtype: str
@@ -115,17 +103,13 @@ class TransferStatusResponse(object):
     def base_date(self, base_date):
         """Sets the base_date of this TransferStatusResponse.
 
-        基準日 半角文字 振込照会明細情報を照会した基準日を示します YYYY-MM-DD形式   # noqa: E501
+        基準日<br>半角文字<br>振込照会明細情報を照会した基準日を示します<br>YYYY-MM-DD形式<br>  # noqa: E501
 
         :param base_date: The base_date of this TransferStatusResponse.  # noqa: E501
         :type: str
         """
         if base_date is None:
             raise ValueError("Invalid value for `base_date`, must not be `None`")  # noqa: E501
-        if base_date is not None and len(base_date) > 10:
-            raise ValueError("Invalid value for `base_date`, length must be less than or equal to `10`")  # noqa: E501
-        if base_date is not None and len(base_date) < 10:
-            raise ValueError("Invalid value for `base_date`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._base_date = base_date
 
@@ -133,7 +117,7 @@ class TransferStatusResponse(object):
     def base_time(self):
         """Gets the base_time of this TransferStatusResponse.  # noqa: E501
 
-        基準時刻 半角文字 振込照会明細情報を照会した基準時刻を示します HH:MM:SS+09:00形式   # noqa: E501
+        基準時刻<br>半角文字<br>振込照会明細情報を照会した基準時刻を示します<br>HH:MM:SS+09:00形式<br>  # noqa: E501
 
         :return: The base_time of this TransferStatusResponse.  # noqa: E501
         :rtype: str
@@ -144,17 +128,13 @@ class TransferStatusResponse(object):
     def base_time(self, base_time):
         """Sets the base_time of this TransferStatusResponse.
 
-        基準時刻 半角文字 振込照会明細情報を照会した基準時刻を示します HH:MM:SS+09:00形式   # noqa: E501
+        基準時刻<br>半角文字<br>振込照会明細情報を照会した基準時刻を示します<br>HH:MM:SS+09:00形式<br>  # noqa: E501
 
         :param base_time: The base_time of this TransferStatusResponse.  # noqa: E501
         :type: str
         """
         if base_time is None:
             raise ValueError("Invalid value for `base_time`, must not be `None`")  # noqa: E501
-        if base_time is not None and len(base_time) > 14:
-            raise ValueError("Invalid value for `base_time`, length must be less than or equal to `14`")  # noqa: E501
-        if base_time is not None and len(base_time) < 14:
-            raise ValueError("Invalid value for `base_time`, length must be greater than or equal to `14`")  # noqa: E501
 
         self._base_time = base_time
 
@@ -162,7 +142,7 @@ class TransferStatusResponse(object):
     def count(self):
         """Gets the count of this TransferStatusResponse.  # noqa: E501
 
-        明細取得件数 半角数字 振込明細の件数   # noqa: E501
+        明細取得件数<br>半角数字<br>振込明細の件数<br>  # noqa: E501
 
         :return: The count of this TransferStatusResponse.  # noqa: E501
         :rtype: str
@@ -173,17 +153,13 @@ class TransferStatusResponse(object):
     def count(self, count):
         """Sets the count of this TransferStatusResponse.
 
-        明細取得件数 半角数字 振込明細の件数   # noqa: E501
+        明細取得件数<br>半角数字<br>振込明細の件数<br>  # noqa: E501
 
         :param count: The count of this TransferStatusResponse.  # noqa: E501
         :type: str
         """
         if count is None:
             raise ValueError("Invalid value for `count`, must not be `None`")  # noqa: E501
-        if count is not None and len(count) > 7:
-            raise ValueError("Invalid value for `count`, length must be less than or equal to `7`")  # noqa: E501
-        if count is not None and len(count) < 1:
-            raise ValueError("Invalid value for `count`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._count = count
 
@@ -191,7 +167,7 @@ class TransferStatusResponse(object):
     def transfer_query_bulk_responses(self):
         """Gets the transfer_query_bulk_responses of this TransferStatusResponse.  # noqa: E501
 
-        振込一括照会対象指定レスポンス 該当する情報が無い場合は項目自体を設定しません   # noqa: E501
+        振込一括照会対象指定レスポンス<br>該当する情報が無い場合は項目自体を設定しません<br>  # noqa: E501
 
         :return: The transfer_query_bulk_responses of this TransferStatusResponse.  # noqa: E501
         :rtype: list[TransferQueryBulkResponse]
@@ -202,7 +178,7 @@ class TransferStatusResponse(object):
     def transfer_query_bulk_responses(self, transfer_query_bulk_responses):
         """Sets the transfer_query_bulk_responses of this TransferStatusResponse.
 
-        振込一括照会対象指定レスポンス 該当する情報が無い場合は項目自体を設定しません   # noqa: E501
+        振込一括照会対象指定レスポンス<br>該当する情報が無い場合は項目自体を設定しません<br>  # noqa: E501
 
         :param transfer_query_bulk_responses: The transfer_query_bulk_responses of this TransferStatusResponse.  # noqa: E501
         :type: list[TransferQueryBulkResponse]
@@ -214,7 +190,7 @@ class TransferStatusResponse(object):
     def transfer_details(self):
         """Gets the transfer_details of this TransferStatusResponse.  # noqa: E501
 
-        振込照会明細情報 振込照会明細情報のリスト 該当する情報が無い場合は空のリストを返却   # noqa: E501
+        振込照会明細情報<br>振込照会明細情報のリスト<br>該当する情報が無い場合は空のリストを返却<br>  # noqa: E501
 
         :return: The transfer_details of this TransferStatusResponse.  # noqa: E501
         :rtype: list[TransferDetail]
@@ -225,7 +201,7 @@ class TransferStatusResponse(object):
     def transfer_details(self, transfer_details):
         """Sets the transfer_details of this TransferStatusResponse.
 
-        振込照会明細情報 振込照会明細情報のリスト 該当する情報が無い場合は空のリストを返却   # noqa: E501
+        振込照会明細情報<br>振込照会明細情報のリスト<br>該当する情報が無い場合は空のリストを返却<br>  # noqa: E501
 
         :param transfer_details: The transfer_details of this TransferStatusResponse.  # noqa: E501
         :type: list[TransferDetail]

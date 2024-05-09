@@ -3,29 +3,23 @@
 """
     GMO Aozora Net Bank Open API
 
-    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/business/service/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
+    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/api-cooperation/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
 
-    OpenAPI spec version: 1.1.12
+    OpenAPI spec version: 1.15.0
     
     Generated by: https://github.com/swagger-api/swagger-codegen.git
 """
-
 
 import pprint
 import re  # noqa: F401
 
 import six
 
-from ganb_corporate_client.models.va_id import VaId  # noqa: F401,E501
-from ganb_corporate_client.models.va_status_code import VaStatusCode  # noqa: F401,E501
-
-
 class VaListRequest(object):
     """NOTE: This class is auto generated by the swagger code generator program.
 
     Do not edit the class manually.
     """
-
     """
     Attributes:
       swagger_types (dict): The key is attribute name
@@ -73,7 +67,6 @@ class VaListRequest(object):
 
     def __init__(self, va_contract_auth_key=None, va_type_code=None, deposit_amount_exist_code=None, va_holder_name_kana=None, va_status_code_list=None, latest_deposit_date_from=None, latest_deposit_date_to=None, va_issue_date_from=None, va_issue_date_to=None, expire_date_from=None, expire_date_to=None, ra_id=None, next_item_key=None, sort_item_code=None, sort_order_code=None, va_id_list=None):  # noqa: E501
         """VaListRequest - a model defined in Swagger"""  # noqa: E501
-
         self._va_contract_auth_key = None
         self._va_type_code = None
         self._deposit_amount_exist_code = None
@@ -91,7 +84,6 @@ class VaListRequest(object):
         self._sort_order_code = None
         self._va_id_list = None
         self.discriminator = None
-
         if va_contract_auth_key is not None:
             self.va_contract_auth_key = va_contract_auth_key
         if va_type_code is not None:
@@ -129,7 +121,7 @@ class VaListRequest(object):
     def va_contract_auth_key(self):
         """Gets the va_contract_auth_key of this VaListRequest.  # noqa: E501
 
-        振込入金口座API認証情報 半角英数字 銀行契約の方はNULLを設定 提携企業の方が、契約された顧客の一覧照会を依頼される場合は必須 提携企業以外の方が値を設定されている場合は「400 Bad Request」を返却   # noqa: E501
+        振込入金口座API認証情報<br>半角英数字<br>銀行契約の方はNULLを設定<br>提携企業の方が、契約された顧客の一覧照会を依頼される場合は必須<br>提携企業以外の方が値を設定されている場合は「400 Bad Request」を返却<br>  # noqa: E501
 
         :return: The va_contract_auth_key of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -140,15 +132,11 @@ class VaListRequest(object):
     def va_contract_auth_key(self, va_contract_auth_key):
         """Sets the va_contract_auth_key of this VaListRequest.
 
-        振込入金口座API認証情報 半角英数字 銀行契約の方はNULLを設定 提携企業の方が、契約された顧客の一覧照会を依頼される場合は必須 提携企業以外の方が値を設定されている場合は「400 Bad Request」を返却   # noqa: E501
+        振込入金口座API認証情報<br>半角英数字<br>銀行契約の方はNULLを設定<br>提携企業の方が、契約された顧客の一覧照会を依頼される場合は必須<br>提携企業以外の方が値を設定されている場合は「400 Bad Request」を返却<br>  # noqa: E501
 
         :param va_contract_auth_key: The va_contract_auth_key of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if va_contract_auth_key is not None and len(va_contract_auth_key) > 400:
-            raise ValueError("Invalid value for `va_contract_auth_key`, length must be less than or equal to `400`")  # noqa: E501
-        if va_contract_auth_key is not None and len(va_contract_auth_key) < 1:
-            raise ValueError("Invalid value for `va_contract_auth_key`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._va_contract_auth_key = va_contract_auth_key
 
@@ -156,7 +144,7 @@ class VaListRequest(object):
     def va_type_code(self):
         """Gets the va_type_code of this VaListRequest.  # noqa: E501
 
-        振込入金口座　種類コード 半角数字 ・1=期限型 ・2=継続型   # noqa: E501
+        振込入金口座　種類コード<br>半角数字<br>・1=期限型<br>・2=継続型<br>  # noqa: E501
 
         :return: The va_type_code of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -167,15 +155,11 @@ class VaListRequest(object):
     def va_type_code(self, va_type_code):
         """Sets the va_type_code of this VaListRequest.
 
-        振込入金口座　種類コード 半角数字 ・1=期限型 ・2=継続型   # noqa: E501
+        振込入金口座　種類コード<br>半角数字<br>・1=期限型<br>・2=継続型<br>  # noqa: E501
 
         :param va_type_code: The va_type_code of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if va_type_code is not None and len(va_type_code) > 1:
-            raise ValueError("Invalid value for `va_type_code`, length must be less than or equal to `1`")  # noqa: E501
-        if va_type_code is not None and len(va_type_code) < 1:
-            raise ValueError("Invalid value for `va_type_code`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._va_type_code = va_type_code
 
@@ -183,7 +167,7 @@ class VaListRequest(object):
     def deposit_amount_exist_code(self):
         """Gets the deposit_amount_exist_code of this VaListRequest.  # noqa: E501
 
-        入金有無コード 半角数字 ・1=入金あり ・2=入金なし   # noqa: E501
+        入金有無コード<br>半角数字<br>・1=入金あり<br>・2=入金なし<br>  # noqa: E501
 
         :return: The deposit_amount_exist_code of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -194,15 +178,11 @@ class VaListRequest(object):
     def deposit_amount_exist_code(self, deposit_amount_exist_code):
         """Sets the deposit_amount_exist_code of this VaListRequest.
 
-        入金有無コード 半角数字 ・1=入金あり ・2=入金なし   # noqa: E501
+        入金有無コード<br>半角数字<br>・1=入金あり<br>・2=入金なし<br>  # noqa: E501
 
         :param deposit_amount_exist_code: The deposit_amount_exist_code of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if deposit_amount_exist_code is not None and len(deposit_amount_exist_code) > 1:
-            raise ValueError("Invalid value for `deposit_amount_exist_code`, length must be less than or equal to `1`")  # noqa: E501
-        if deposit_amount_exist_code is not None and len(deposit_amount_exist_code) < 1:
-            raise ValueError("Invalid value for `deposit_amount_exist_code`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._deposit_amount_exist_code = deposit_amount_exist_code
 
@@ -210,7 +190,7 @@ class VaListRequest(object):
     def va_holder_name_kana(self):
         """Gets the va_holder_name_kana of this VaListRequest.  # noqa: E501
 
-        振込入金口座名義カナ 半角文字 振込許容文字を指定可 ただし、一部の非許容文字は、許容文字に変換を行います   # noqa: E501
+        振込入金口座名義カナ<br>半角文字<br>振込許容文字を指定可<br>ただし、一部の非許容文字は、許容文字に変換を行います<br>  # noqa: E501
 
         :return: The va_holder_name_kana of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -221,15 +201,11 @@ class VaListRequest(object):
     def va_holder_name_kana(self, va_holder_name_kana):
         """Sets the va_holder_name_kana of this VaListRequest.
 
-        振込入金口座名義カナ 半角文字 振込許容文字を指定可 ただし、一部の非許容文字は、許容文字に変換を行います   # noqa: E501
+        振込入金口座名義カナ<br>半角文字<br>振込許容文字を指定可<br>ただし、一部の非許容文字は、許容文字に変換を行います<br>  # noqa: E501
 
         :param va_holder_name_kana: The va_holder_name_kana of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if va_holder_name_kana is not None and len(va_holder_name_kana) > 40:
-            raise ValueError("Invalid value for `va_holder_name_kana`, length must be less than or equal to `40`")  # noqa: E501
-        if va_holder_name_kana is not None and len(va_holder_name_kana) < 1:
-            raise ValueError("Invalid value for `va_holder_name_kana`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._va_holder_name_kana = va_holder_name_kana
 
@@ -237,7 +213,7 @@ class VaListRequest(object):
     def va_status_code_list(self):
         """Gets the va_status_code_list of this VaListRequest.  # noqa: E501
 
-        振込入金口座IDリスト 照会したい振込入金口座状態コードのリスト 上限3件まで設定可能   # noqa: E501
+        振込入金口座IDリスト<br>照会したい振込入金口座状態コードのリスト<br>上限3件まで設定可能<br>  # noqa: E501
 
         :return: The va_status_code_list of this VaListRequest.  # noqa: E501
         :rtype: list[VaStatusCode]
@@ -248,7 +224,7 @@ class VaListRequest(object):
     def va_status_code_list(self, va_status_code_list):
         """Sets the va_status_code_list of this VaListRequest.
 
-        振込入金口座IDリスト 照会したい振込入金口座状態コードのリスト 上限3件まで設定可能   # noqa: E501
+        振込入金口座IDリスト<br>照会したい振込入金口座状態コードのリスト<br>上限3件まで設定可能<br>  # noqa: E501
 
         :param va_status_code_list: The va_status_code_list of this VaListRequest.  # noqa: E501
         :type: list[VaStatusCode]
@@ -260,7 +236,7 @@ class VaListRequest(object):
     def latest_deposit_date_from(self):
         """Gets the latest_deposit_date_from of this VaListRequest.  # noqa: E501
 
-        最終入金日From 半角文字 YYYY-MM-DD形式 入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）   # noqa: E501
+        最終入金日From<br>半角文字<br>YYYY-MM-DD形式<br>入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>  # noqa: E501
 
         :return: The latest_deposit_date_from of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -271,15 +247,11 @@ class VaListRequest(object):
     def latest_deposit_date_from(self, latest_deposit_date_from):
         """Sets the latest_deposit_date_from of this VaListRequest.
 
-        最終入金日From 半角文字 YYYY-MM-DD形式 入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）   # noqa: E501
+        最終入金日From<br>半角文字<br>YYYY-MM-DD形式<br>入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>  # noqa: E501
 
         :param latest_deposit_date_from: The latest_deposit_date_from of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if latest_deposit_date_from is not None and len(latest_deposit_date_from) > 10:
-            raise ValueError("Invalid value for `latest_deposit_date_from`, length must be less than or equal to `10`")  # noqa: E501
-        if latest_deposit_date_from is not None and len(latest_deposit_date_from) < 10:
-            raise ValueError("Invalid value for `latest_deposit_date_from`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._latest_deposit_date_from = latest_deposit_date_from
 
@@ -287,7 +259,7 @@ class VaListRequest(object):
     def latest_deposit_date_to(self):
         """Gets the latest_deposit_date_to of this VaListRequest.  # noqa: E501
 
-        最終入金日To 半角文字 YYYY-MM-DD形式 入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 最終入金日Fromと最終入金日Toを指定する場合は、最終入金日From≦最終入金日Toとし、それ以外は「400 Bad Request」を返却   # noqa: E501
+        最終入金日To<br>半角文字<br>YYYY-MM-DD形式<br>入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>最終入金日Fromと最終入金日Toを指定する場合は、最終入金日From≦最終入金日Toとし、それ以外は「400 Bad Request」を返却<br>  # noqa: E501
 
         :return: The latest_deposit_date_to of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -298,15 +270,11 @@ class VaListRequest(object):
     def latest_deposit_date_to(self, latest_deposit_date_to):
         """Sets the latest_deposit_date_to of this VaListRequest.
 
-        最終入金日To 半角文字 YYYY-MM-DD形式 入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 最終入金日Fromと最終入金日Toを指定する場合は、最終入金日From≦最終入金日Toとし、それ以外は「400 Bad Request」を返却   # noqa: E501
+        最終入金日To<br>半角文字<br>YYYY-MM-DD形式<br>入金有無コードが未設定もしくは、「1=入金あり」が設定されている場合は指定可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>最終入金日Fromと最終入金日Toを指定する場合は、最終入金日From≦最終入金日Toとし、それ以外は「400 Bad Request」を返却<br>  # noqa: E501
 
         :param latest_deposit_date_to: The latest_deposit_date_to of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if latest_deposit_date_to is not None and len(latest_deposit_date_to) > 10:
-            raise ValueError("Invalid value for `latest_deposit_date_to`, length must be less than or equal to `10`")  # noqa: E501
-        if latest_deposit_date_to is not None and len(latest_deposit_date_to) < 10:
-            raise ValueError("Invalid value for `latest_deposit_date_to`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._latest_deposit_date_to = latest_deposit_date_to
 
@@ -314,7 +282,7 @@ class VaListRequest(object):
     def va_issue_date_from(self):
         """Gets the va_issue_date_from of this VaListRequest.  # noqa: E501
 
-        振込入金口座発行日From 半角文字 YYYY-MM-DD形式   # noqa: E501
+        振込入金口座発行日From<br>半角文字<br>YYYY-MM-DD形式<br>  # noqa: E501
 
         :return: The va_issue_date_from of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -325,15 +293,11 @@ class VaListRequest(object):
     def va_issue_date_from(self, va_issue_date_from):
         """Sets the va_issue_date_from of this VaListRequest.
 
-        振込入金口座発行日From 半角文字 YYYY-MM-DD形式   # noqa: E501
+        振込入金口座発行日From<br>半角文字<br>YYYY-MM-DD形式<br>  # noqa: E501
 
         :param va_issue_date_from: The va_issue_date_from of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if va_issue_date_from is not None and len(va_issue_date_from) > 10:
-            raise ValueError("Invalid value for `va_issue_date_from`, length must be less than or equal to `10`")  # noqa: E501
-        if va_issue_date_from is not None and len(va_issue_date_from) < 10:
-            raise ValueError("Invalid value for `va_issue_date_from`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._va_issue_date_from = va_issue_date_from
 
@@ -341,7 +305,7 @@ class VaListRequest(object):
     def va_issue_date_to(self):
         """Gets the va_issue_date_to of this VaListRequest.  # noqa: E501
 
-        振込入金口座発行日To 半角文字 YYYY-MM-DD形式 振込入金口座発行Fromと振込入金口座発行Toを指定する場合は、振込入金口座発行From≦振込入金口座発行Toとし、それ以外は「400 Bad Request」を返却   # noqa: E501
+        振込入金口座発行日To<br>半角文字<br>YYYY-MM-DD形式<br>振込入金口座発行Fromと振込入金口座発行Toを指定する場合は、振込入金口座発行From≦振込入金口座発行Toとし、それ以外は「400 Bad Request」を返却<br>  # noqa: E501
 
         :return: The va_issue_date_to of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -352,15 +316,11 @@ class VaListRequest(object):
     def va_issue_date_to(self, va_issue_date_to):
         """Sets the va_issue_date_to of this VaListRequest.
 
-        振込入金口座発行日To 半角文字 YYYY-MM-DD形式 振込入金口座発行Fromと振込入金口座発行Toを指定する場合は、振込入金口座発行From≦振込入金口座発行Toとし、それ以外は「400 Bad Request」を返却   # noqa: E501
+        振込入金口座発行日To<br>半角文字<br>YYYY-MM-DD形式<br>振込入金口座発行Fromと振込入金口座発行Toを指定する場合は、振込入金口座発行From≦振込入金口座発行Toとし、それ以外は「400 Bad Request」を返却<br>  # noqa: E501
 
         :param va_issue_date_to: The va_issue_date_to of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if va_issue_date_to is not None and len(va_issue_date_to) > 10:
-            raise ValueError("Invalid value for `va_issue_date_to`, length must be less than or equal to `10`")  # noqa: E501
-        if va_issue_date_to is not None and len(va_issue_date_to) < 10:
-            raise ValueError("Invalid value for `va_issue_date_to`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._va_issue_date_to = va_issue_date_to
 
@@ -368,7 +328,7 @@ class VaListRequest(object):
     def expire_date_from(self):
         """Gets the expire_date_from of this VaListRequest.  # noqa: E501
 
-        有効期限From 半角文字 YYYY-MM-DD形式 振込入金口座 種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）   # noqa: E501
+        有効期限From<br>半角文字<br>YYYY-MM-DD形式<br>振込入金口座 種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>  # noqa: E501
 
         :return: The expire_date_from of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -379,15 +339,11 @@ class VaListRequest(object):
     def expire_date_from(self, expire_date_from):
         """Sets the expire_date_from of this VaListRequest.
 
-        有効期限From 半角文字 YYYY-MM-DD形式 振込入金口座 種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）   # noqa: E501
+        有効期限From<br>半角文字<br>YYYY-MM-DD形式<br>振込入金口座 種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>  # noqa: E501
 
         :param expire_date_from: The expire_date_from of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if expire_date_from is not None and len(expire_date_from) > 10:
-            raise ValueError("Invalid value for `expire_date_from`, length must be less than or equal to `10`")  # noqa: E501
-        if expire_date_from is not None and len(expire_date_from) < 10:
-            raise ValueError("Invalid value for `expire_date_from`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._expire_date_from = expire_date_from
 
@@ -395,7 +351,7 @@ class VaListRequest(object):
     def expire_date_to(self):
         """Gets the expire_date_to of this VaListRequest.  # noqa: E501
 
-        有効期限To 半角文字 YYYY-MM-DD形式 振込入金口座 種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 有効期限Fromと有効期限Toを指定する場合は、有効期限From≦有効期限Toとし、それ以外は「400 Bad Request」を返却   # noqa: E501
+        有効期限To<br>半角文字<br>YYYY-MM-DD形式<br>振込入金口座<br>種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>有効期限Fromと有効期限Toを指定する場合は、有効期限From≦有効期限Toとし、それ以外は「400 Bad Request」を返却<br>  # noqa: E501
 
         :return: The expire_date_to of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -406,15 +362,11 @@ class VaListRequest(object):
     def expire_date_to(self, expire_date_to):
         """Sets the expire_date_to of this VaListRequest.
 
-        有効期限To 半角文字 YYYY-MM-DD形式 振込入金口座 種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 有効期限Fromと有効期限Toを指定する場合は、有効期限From≦有効期限Toとし、それ以外は「400 Bad Request」を返却   # noqa: E501
+        有効期限To<br>半角文字<br>YYYY-MM-DD形式<br>振込入金口座<br>種類コードが未設定もしくは、「1＝期限型」が設定されている場合は指定可　それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>有効期限Fromと有効期限Toを指定する場合は、有効期限From≦有効期限Toとし、それ以外は「400 Bad Request」を返却<br>  # noqa: E501
 
         :param expire_date_to: The expire_date_to of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if expire_date_to is not None and len(expire_date_to) > 10:
-            raise ValueError("Invalid value for `expire_date_to`, length must be less than or equal to `10`")  # noqa: E501
-        if expire_date_to is not None and len(expire_date_to) < 10:
-            raise ValueError("Invalid value for `expire_date_to`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._expire_date_to = expire_date_to
 
@@ -422,7 +374,7 @@ class VaListRequest(object):
     def ra_id(self):
         """Gets the ra_id of this VaListRequest.  # noqa: E501
 
-        入金口座ID 半角数字 口座一覧照会APIで取得できる口座IDを設定 科目コードが以下の口座IDのみ受け付けます ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        入金口座ID<br>半角数字<br>口座一覧照会APIで取得できる口座IDを設定<br>科目コードが以下の口座IDのみ受け付けます<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :return: The ra_id of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -433,15 +385,11 @@ class VaListRequest(object):
     def ra_id(self, ra_id):
         """Sets the ra_id of this VaListRequest.
 
-        入金口座ID 半角数字 口座一覧照会APIで取得できる口座IDを設定 科目コードが以下の口座IDのみ受け付けます ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        入金口座ID<br>半角数字<br>口座一覧照会APIで取得できる口座IDを設定<br>科目コードが以下の口座IDのみ受け付けます<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :param ra_id: The ra_id of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if ra_id is not None and len(ra_id) > 29:
-            raise ValueError("Invalid value for `ra_id`, length must be less than or equal to `29`")  # noqa: E501
-        if ra_id is not None and len(ra_id) < 12:
-            raise ValueError("Invalid value for `ra_id`, length must be greater than or equal to `12`")  # noqa: E501
 
         self._ra_id = ra_id
 
@@ -449,7 +397,7 @@ class VaListRequest(object):
     def next_item_key(self):
         """Gets the next_item_key of this VaListRequest.  # noqa: E501
 
-        次一覧キー 半角英数字   # noqa: E501
+        次一覧キー<br>半角英数字<br>  # noqa: E501
 
         :return: The next_item_key of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -460,15 +408,11 @@ class VaListRequest(object):
     def next_item_key(self, next_item_key):
         """Sets the next_item_key of this VaListRequest.
 
-        次一覧キー 半角英数字   # noqa: E501
+        次一覧キー<br>半角英数字<br>  # noqa: E501
 
         :param next_item_key: The next_item_key of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if next_item_key is not None and len(next_item_key) > 24:
-            raise ValueError("Invalid value for `next_item_key`, length must be less than or equal to `24`")  # noqa: E501
-        if next_item_key is not None and len(next_item_key) < 1:
-            raise ValueError("Invalid value for `next_item_key`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._next_item_key = next_item_key
 
@@ -476,7 +420,7 @@ class VaListRequest(object):
     def sort_item_code(self):
         """Gets the sort_item_code of this VaListRequest.  # noqa: E501
 
-        ソート項目コード 半角数字 ・1=有効期限日時 ・2=最終入金日 ・3=発行日時 ・4=最終入金金額 有効期限日時、最終入金日、最終入金金額など、レスポンスで返却されない場合がある項目をソート項目に指定した場合、ソートは効きません   # noqa: E501
+        ソート項目コード<br>半角数字<br>・1=有効期限日時<br>・2=最終入金日<br>・3=発行日時<br>・4=最終入金金額<br>有効期限日時、最終入金日、最終入金金額など、レスポンスで返却されない場合がある項目をソート項目に指定した場合、ソートは効きません<br>  # noqa: E501
 
         :return: The sort_item_code of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -487,15 +431,11 @@ class VaListRequest(object):
     def sort_item_code(self, sort_item_code):
         """Sets the sort_item_code of this VaListRequest.
 
-        ソート項目コード 半角数字 ・1=有効期限日時 ・2=最終入金日 ・3=発行日時 ・4=最終入金金額 有効期限日時、最終入金日、最終入金金額など、レスポンスで返却されない場合がある項目をソート項目に指定した場合、ソートは効きません   # noqa: E501
+        ソート項目コード<br>半角数字<br>・1=有効期限日時<br>・2=最終入金日<br>・3=発行日時<br>・4=最終入金金額<br>有効期限日時、最終入金日、最終入金金額など、レスポンスで返却されない場合がある項目をソート項目に指定した場合、ソートは効きません<br>  # noqa: E501
 
         :param sort_item_code: The sort_item_code of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if sort_item_code is not None and len(sort_item_code) > 1:
-            raise ValueError("Invalid value for `sort_item_code`, length must be less than or equal to `1`")  # noqa: E501
-        if sort_item_code is not None and len(sort_item_code) < 1:
-            raise ValueError("Invalid value for `sort_item_code`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._sort_item_code = sort_item_code
 
@@ -503,7 +443,7 @@ class VaListRequest(object):
     def sort_order_code(self):
         """Gets the sort_order_code of this VaListRequest.  # noqa: E501
 
-        ソート順コード 半角数字 ソート項目コードのソート順を指定するコード値 ・1=昇順 ・2=降順   # noqa: E501
+        ソート順コード<br>半角数字<br>ソート項目コードのソート順を指定するコード値<br>・1=昇順<br>・2=降順<br>  # noqa: E501
 
         :return: The sort_order_code of this VaListRequest.  # noqa: E501
         :rtype: str
@@ -514,15 +454,11 @@ class VaListRequest(object):
     def sort_order_code(self, sort_order_code):
         """Sets the sort_order_code of this VaListRequest.
 
-        ソート順コード 半角数字 ソート項目コードのソート順を指定するコード値 ・1=昇順 ・2=降順   # noqa: E501
+        ソート順コード<br>半角数字<br>ソート項目コードのソート順を指定するコード値<br>・1=昇順<br>・2=降順<br>  # noqa: E501
 
         :param sort_order_code: The sort_order_code of this VaListRequest.  # noqa: E501
         :type: str
         """
-        if sort_order_code is not None and len(sort_order_code) > 1:
-            raise ValueError("Invalid value for `sort_order_code`, length must be less than or equal to `1`")  # noqa: E501
-        if sort_order_code is not None and len(sort_order_code) < 1:
-            raise ValueError("Invalid value for `sort_order_code`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._sort_order_code = sort_order_code
 
@@ -530,7 +466,7 @@ class VaListRequest(object):
     def va_id_list(self):
         """Gets the va_id_list of this VaListRequest.  # noqa: E501
 
-        振込入金口座IDリスト 照会したい振込入金口座IDのリスト 上限500件まで設定可能   # noqa: E501
+        振込入金口座IDリスト<br>照会したい振込入金口座IDのリスト<br>上限500件まで設定可能<br>  # noqa: E501
 
         :return: The va_id_list of this VaListRequest.  # noqa: E501
         :rtype: list[VaId]
@@ -541,7 +477,7 @@ class VaListRequest(object):
     def va_id_list(self, va_id_list):
         """Sets the va_id_list of this VaListRequest.
 
-        振込入金口座IDリスト 照会したい振込入金口座IDのリスト 上限500件まで設定可能   # noqa: E501
+        振込入金口座IDリスト<br>照会したい振込入金口座IDのリスト<br>上限500件まで設定可能<br>  # noqa: E501
 
         :param va_id_list: The va_id_list of this VaListRequest.  # noqa: E501
         :type: list[VaId]

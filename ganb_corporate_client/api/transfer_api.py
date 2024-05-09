@@ -3,13 +3,12 @@
 """
     GMO Aozora Net Bank Open API
 
-    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/business/service/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
+    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/api-cooperation/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
 
-    OpenAPI spec version: 1.1.12
+    OpenAPI spec version: 1.15.0
     
     Generated by: https://github.com/swagger-api/swagger-codegen.git
 """
-
 
 from __future__ import absolute_import
 
@@ -44,7 +43,7 @@ class TransferApi(object):
 
         :param async_req bool
         :param TransferCancelRequest body: HTTPリクエストボディ (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str x_access_token: アクセストークン (required)
         :return: TransferCancelResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -67,7 +66,7 @@ class TransferApi(object):
 
         :param async_req bool
         :param TransferCancelRequest body: HTTPリクエストボディ (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str x_access_token: アクセストークン (required)
         :return: TransferCancelResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -143,7 +142,7 @@ class TransferApi(object):
     def transfer_fee_using_post(self, body, x_access_token, **kwargs):  # noqa: E501
         """振込手数料事前照会  # noqa: E501
 
-        <p>振込・振込予約を行うための依頼内容の事前チェックと手数料を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='padding-left:20px;'>最大99件まで登録可能</p>   <p style='padding-left:20px;'>1件の場合通常の振込扱いとなり、2件以上で一括振込扱いとなります</p>   <p style='padding-left:20px;'>振込無料回数とポイントについては、算出から振込実行までの間に変動する可能性があるため、手数料算出時の計算対象から除外しています</p> </div>   # noqa: E501
+        <p>振込・振込予約を行うための依頼内容の事前チェックと手数料を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='padding-left:20px;'>最大99件まで登録可能</p>   <p style='padding-left:20px;'>1件の場合通常の振込扱いとなり、2件以上で一括振込扱いとなります</p>   <p style='padding-left:20px;'>合計振込手数料および個別振込手数料は、振込実行時までに手数料の改定や消費税の変更等が行われた場合は、当APIで返却した手数料とは異なる手数料が適用されることがあります</p>   <p style='padding-left:20px;'>振込無料回数とポイントについては、算出から振込実行までの間に変動する可能性があるため、手数料算出時の計算対象から除外して返却されます</p> </div>   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.transfer_fee_using_post(body, x_access_token, async_req=True)
@@ -151,7 +150,7 @@ class TransferApi(object):
 
         :param async_req bool
         :param TransferRequest body: HTTPリクエストボディ (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str x_access_token: アクセストークン (required)
         :return: TransferFeeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -166,7 +165,7 @@ class TransferApi(object):
     def transfer_fee_using_post_with_http_info(self, body, x_access_token, **kwargs):  # noqa: E501
         """振込手数料事前照会  # noqa: E501
 
-        <p>振込・振込予約を行うための依頼内容の事前チェックと手数料を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='padding-left:20px;'>最大99件まで登録可能</p>   <p style='padding-left:20px;'>1件の場合通常の振込扱いとなり、2件以上で一括振込扱いとなります</p>   <p style='padding-left:20px;'>振込無料回数とポイントについては、算出から振込実行までの間に変動する可能性があるため、手数料算出時の計算対象から除外しています</p> </div>   # noqa: E501
+        <p>振込・振込予約を行うための依頼内容の事前チェックと手数料を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='padding-left:20px;'>最大99件まで登録可能</p>   <p style='padding-left:20px;'>1件の場合通常の振込扱いとなり、2件以上で一括振込扱いとなります</p>   <p style='padding-left:20px;'>合計振込手数料および個別振込手数料は、振込実行時までに手数料の改定や消費税の変更等が行われた場合は、当APIで返却した手数料とは異なる手数料が適用されることがあります</p>   <p style='padding-left:20px;'>振込無料回数とポイントについては、算出から振込実行までの間に変動する可能性があるため、手数料算出時の計算対象から除外して返却されます</p> </div>   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.transfer_fee_using_post_with_http_info(body, x_access_token, async_req=True)
@@ -174,7 +173,7 @@ class TransferApi(object):
 
         :param async_req bool
         :param TransferRequest body: HTTPリクエストボディ (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str x_access_token: アクセストークン (required)
         :return: TransferFeeResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -250,16 +249,16 @@ class TransferApi(object):
     def transfer_request_result_using_get(self, account_id, apply_no, x_access_token, **kwargs):  # noqa: E501
         """振込依頼結果照会  # noqa: E501
 
-        振込依頼、振込取消依頼の処理状態を照会します 振込取消依頼をした場合は、最後の依頼の結果コードが照会対象となります   # noqa: E501
+        <p>振込依頼、振込取消依頼の処理状態を照会します</P> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='padding-left:20px;'>振込取消依頼をした場合は、最後の依頼の結果コードが照会対象となります</p> </div>   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.transfer_request_result_using_get(account_id, apply_no, x_access_token, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str account_id: 口座ID 半角数字 口座を識別するID  minLength: 12 maxLength: 29  (required)
-        :param str apply_no: 受付番号（振込申請番号） 半角数字 すべての振込・総合振込で採番される、照会の基本単位となる番号  minLength: 16 maxLength: 16  (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str account_id: 口座ID<br>半角数字<br>口座を識別するID (required)
+        :param str apply_no: 受付番号（振込申請番号）<br>半角数字<br>すべての振込・総合振込で採番される、照会の基本単位となる番号 (required)
+        :param str x_access_token: アクセストークン (required)
         :return: TransferRequestResultResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -274,16 +273,16 @@ class TransferApi(object):
     def transfer_request_result_using_get_with_http_info(self, account_id, apply_no, x_access_token, **kwargs):  # noqa: E501
         """振込依頼結果照会  # noqa: E501
 
-        振込依頼、振込取消依頼の処理状態を照会します 振込取消依頼をした場合は、最後の依頼の結果コードが照会対象となります   # noqa: E501
+        <p>振込依頼、振込取消依頼の処理状態を照会します</P> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='padding-left:20px;'>振込取消依頼をした場合は、最後の依頼の結果コードが照会対象となります</p> </div>   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.transfer_request_result_using_get_with_http_info(account_id, apply_no, x_access_token, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str account_id: 口座ID 半角数字 口座を識別するID  minLength: 12 maxLength: 29  (required)
-        :param str apply_no: 受付番号（振込申請番号） 半角数字 すべての振込・総合振込で採番される、照会の基本単位となる番号  minLength: 16 maxLength: 16  (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str account_id: 口座ID<br>半角数字<br>口座を識別するID (required)
+        :param str apply_no: 受付番号（振込申請番号）<br>半角数字<br>すべての振込・総合振込で採番される、照会の基本単位となる番号 (required)
+        :param str x_access_token: アクセストークン (required)
         :return: TransferRequestResultResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -339,10 +338,6 @@ class TransferApi(object):
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json;charset=UTF-8'])  # noqa: E501
 
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json;charset=UTF-8'])  # noqa: E501
-
         # Authentication setting
         auth_settings = []  # noqa: E501
 
@@ -373,7 +368,8 @@ class TransferApi(object):
 
         :param async_req bool
         :param TransferRequest body: HTTPリクエストボディ (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str x_access_token: アクセストークン (required)
+        :param str idempotency_key: 冪等キー
         :return: TransferRequestResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -396,13 +392,14 @@ class TransferApi(object):
 
         :param async_req bool
         :param TransferRequest body: HTTPリクエストボディ (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
+        :param str x_access_token: アクセストークン (required)
+        :param str idempotency_key: 冪等キー
         :return: TransferRequestResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'x_access_token']  # noqa: E501
+        all_params = ['body', 'x_access_token', 'idempotency_key']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -435,6 +432,8 @@ class TransferApi(object):
         header_params = {}
         if 'x_access_token' in params:
             header_params['x-access-token'] = params['x_access_token']  # noqa: E501
+        if 'idempotency_key' in params:
+            header_params['Idempotency-Key'] = params['idempotency_key']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -472,23 +471,23 @@ class TransferApi(object):
     def transfer_status_using_get(self, account_id, query_key_class, x_access_token, **kwargs):  # noqa: E501
         """振込状況照会  # noqa: E501
 
-        <p>仕向の振込状況および履歴を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>取得上限件数</p>   <p style='padding-left:20px;'>500件</p>   <p style='padding-left:20px;'>取得できる明細数が500に満たないときは取得できる明細のみを返却します</p>   <p style='padding-left:20px;'>取得できる明細が存在しない場合は「200：OK」とし明細を返却しません</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ページング</p>   <p style='padding-left:20px;'>2ページ目以降を照会する際は、初回と同じリクエスト内容に、初回レスポンスの次明細キーを追加してリクエストしてください</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ソート順</p>   <p style='padding-left:20px;'>振込照会対象期間区分の指定により下記となります  </p>  <p style='padding-left:20px;'>1：振込申請受付日　第1ソート：振込申請日昇順　第２ソート：振込申請番号昇順</p>  <p style='padding-left:20px;'>2：振込指定日　　　第1ソート：振込指定日昇順　第２ソート：振込申請番号昇順</p>   <p style='padding-left:20px;'>※振込照会対象期間区分の指定がない場合は、1：振込申請受付日と同じとします</p> </div> <div style='width:600px; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>対象期間</p>   <div style='display:table; margin-left:20px; background-color:#29659b;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff;'>日本語名</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9312;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9313;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9314;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9315;</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間From</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間To</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div> </div> <div style='margin:10px;'>   <ul>     <li style='list-style-type:none;'>&#9312;の場合　当日分の明細を返却</li>     <li style='list-style-type:none;'>&#9313;の場合　対象期間From　～　当日までの明細を返却</li>     <li style='list-style-type:none;'>&#9314;の場合　取引初回　～　対象期間Toまでの明細を返却</li>     <li style='list-style-type:none;'>&#9315;の場合　対象期間From　～　対象期間Toまでの明細を返却</li>   </ul> </div> <div style='margin-bottom:40px;' /> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象ステータス</p>   <p style='padding-left:20px;'>申請中以降のステータスで照会が可能となります</p>   <p style='padding-left:20px;'>依頼中、作成中の状態は照会対象外です</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象となる明細</p>   <p style='padding-left:20px;'>振込・振替・およびその予約の履歴と状況が照会対象となります（APIからの依頼結果のみではありません）</p>   <p style='padding-left:20px;'>定額自動振込契約によって自動登録された振込は照会対象となります</p>   <p style='padding-left:20px;'>定額自動振込契約の申請状態と状況は対象外となります</p> </div>   # noqa: E501
+        <p>仕向の振込状況および履歴を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>取得上限件数</p>   <p style='padding-left:20px;'>500件</p>   <p style='padding-left:20px;'>取得できる明細数が500に満たないときは取得できる明細のみを返却します</p>   <p style='padding-left:20px;'>取得できる明細が存在しない場合は「200：OK」とし明細を返却しません</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ページング</p>   <p style='padding-left:20px;'>2ページ目以降を照会する際は、初回と同じリクエスト内容に、初回レスポンスの次明細キーを追加してリクエストしてください</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ソート順</p>   <p style='padding-left:20px;'>振込照会対象期間区分の指定により下記となります  </p>  <p style='padding-left:20px;'>1：振込申請受付日　第1ソート：振込申請日昇順　第２ソート：振込申請番号昇順</p>  <p style='padding-left:20px;'>2：振込指定日　　　第1ソート：振込指定日昇順　第２ソート：振込申請番号昇順</p>   <p style='padding-left:20px;'>※振込照会対象期間区分の指定がない場合は、1：振込申請受付日と同じとします</p> </div> <div style='width:600px; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>対象期間</p>   <div style='display:table; margin-left:20px; background-color:#29659b;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff;'>日本語名</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9312;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9313;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9314;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9315;</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間From</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間To</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div> </div> <div style='margin:10px;'>   <ul>     <li style='list-style-type:none;'>&#9312;の場合　当日分の明細を返却</li>     <li style='list-style-type:none;'>&#9313;の場合　対象期間From　～　当日までの明細を返却</li>     <li style='list-style-type:none;'>&#9314;の場合　取引初回　～　対象期間Toまでの明細を返却</li>     <li style='list-style-type:none;'>&#9315;の場合　対象期間From　～　対象期間Toまでの明細を返却</li>   </ul> </div> <div style='margin-bottom:40px;' /> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象ステータス</p>   <p style='padding-left:20px;'>申請中以降のステータスで照会が可能となります</p>   <p style='padding-left:20px;'>依頼中、作成中の状態は照会対象外です</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象となる明細</p>   <p style='padding-left:20px;'>振込・振替・およびその予約の履歴と状況が照会対象となります（APIからの依頼結果のみではありません）</p>   <p style='padding-left:20px;'>定額自動振込契約によって自動登録された振込は照会対象となります</p>   <p style='padding-left:20px;'>定額自動振込契約の申請状態と状況は対象外となります</p>   <p style='padding-left:20px;'>ビジネスIDをご利用のお客様で振込申請者が実施した振込申請の取下は、申請者およびマスター権限を有したユーザーのみが照会可能となります</p> </div>   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.transfer_status_using_get(account_id, query_key_class, x_access_token, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str account_id: 口座ID 半角数字 口座を識別するID  minLength: 12 maxLength: 29  (required)
-        :param str query_key_class: 照会対象キー区分 半角数字 照会対象のキー 1：振込申請照会対象指定、2：振込一括照会対象指定  minLength: 1 maxLength: 1  (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
-        :param str apply_no: 受付番号（振込申請番号） 半角数字 照会対象の番号を設定 照会対象キー区分が、1のときは必須 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）  minLength: 16 maxLength: 16 
-        :param str date_from: 対象期間From 半角文字 YYYY-MM-DD形式 照会対象キー区分が、2のときは入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）  minLength: 10 maxLength: 10 
-        :param str date_to: 対象期間To 半角文字 YYYY-MM-DD形式 照会対象キー区分が、2のときは入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 対象期間Fromと対象期間Toを指定する場合は、対象期間From≦対象期間Toとし、それ以外は「400 Bad Request」を返却  minLength: 10 maxLength: 10 
-        :param str next_item_key: 次明細キー 半角数字 照会対象キー区分が、2のときは入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）              minLength: 1 maxLength: 24 
-        :param list[str] request_transfer_status: 照会対象ステータス  半角数字  2:申請中、3:差戻、4:取下げ、5:期限切れ、8:承認取消/予約取消、  11:予約中、12:手続中、13:リトライ中、  20:手続済、22:資金返却、24:組戻手続中、25:組戻済、26:組戻不成立、  40:手続不成立  照会対象キー区分が、2のときは設定可  それ以外は設定しません（値が設定されている場合は、「400 Bad Request」を返却）  配列のため、複数設定した場合は対象のステータスをOR条件で検索します  省略した場合は全てを設定したものとみなします  minLength: 1 maxLength: 3 
-        :param str request_transfer_class: 振込照会対象取得区分 半角数字 1：ALL、2：振込申請のみ、3：振込受付情報のみ 照会対象キー区分が2かつ、ビジネスID管理利用中の場合のときのみ入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 照会対象キー区分が、2のときに指定しない場合は1と扱います  minLength: 1 maxLength: 1 
-        :param str request_transfer_term: 振込照会対象期間区分 半角数字 対象期間Fromと対象期間Toで指定する日付の区分 1：振込申請受付日　2：振込指定日 照会対象キー区分が2のときのみ入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 照会対象キー区分が、2のときに指定しない場合は1と扱います  minLength: 1 maxLength: 1 
+        :param str account_id: 口座ID<br>半角数字<br>口座を識別するID (required)
+        :param str query_key_class: 照会対象キー区分<br>半角数字<br>照会対象のキー<br>1：振込申請照会対象指定、2：振込一括照会対象指定 (required)
+        :param str x_access_token: アクセストークン (required)
+        :param str apply_no: 受付番号（振込申請番号）<br>半角数字<br>照会対象の番号を設定<br>照会対象キー区分が、1のときは必須<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）
+        :param str date_from: 対象期間From<br>半角文字<br>YYYY-MM-DD形式<br>照会対象キー区分が、2のときは入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）
+        :param str date_to: 対象期間To<br>半角文字<br>YYYY-MM-DD形式<br>照会対象キー区分が、2のときは入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>対象期間Fromと対象期間Toを指定する場合は、対象期間From≦対象期間Toとし、それ以外は「400 Bad Request」を返却
+        :param str next_item_key: 次明細キー<br>半角数字<br>照会対象キー区分が、2のときは入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）
+        :param list[str] request_transfer_status: 照会対象ステータス<br> 半角数字<br> 2:申請中、3:差戻、4:取下げ、5:期限切れ、8:承認取消/予約取消、<br> 11:予約中、12:手続中、13:リトライ中、<br> 20:手続済、22:資金返却、24:組戻手続中、25:組戻済、26:組戻不成立、<br> 40:手続不成立<br> 照会対象キー区分が、2のときは設定可<br> それ以外は設定しません（値が設定されている場合は、「400 Bad Request」を返却）<br> 配列のため、複数設定した場合は対象のステータスをOR条件で検索します<br> 省略した場合は全てを設定したものとみなします
+        :param str request_transfer_class: 振込照会対象取得区分<br>半角数字<br>1：ALL、2：振込申請のみ、3：振込受付情報のみ<br>照会対象キー区分が2かつ、ビジネスID管理利用中の場合のときのみ入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>照会対象キー区分が、2のときに指定しない場合は1と扱います
+        :param str request_transfer_term: 振込照会対象期間区分<br>半角数字<br>対象期間Fromと対象期間Toで指定する日付の区分<br>1：振込申請受付日　2：振込指定日<br>照会対象キー区分が2のときのみ入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>照会対象キー区分が、2のときに指定しない場合は1と扱います
         :return: TransferStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -503,23 +502,23 @@ class TransferApi(object):
     def transfer_status_using_get_with_http_info(self, account_id, query_key_class, x_access_token, **kwargs):  # noqa: E501
         """振込状況照会  # noqa: E501
 
-        <p>仕向の振込状況および履歴を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>取得上限件数</p>   <p style='padding-left:20px;'>500件</p>   <p style='padding-left:20px;'>取得できる明細数が500に満たないときは取得できる明細のみを返却します</p>   <p style='padding-left:20px;'>取得できる明細が存在しない場合は「200：OK」とし明細を返却しません</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ページング</p>   <p style='padding-left:20px;'>2ページ目以降を照会する際は、初回と同じリクエスト内容に、初回レスポンスの次明細キーを追加してリクエストしてください</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ソート順</p>   <p style='padding-left:20px;'>振込照会対象期間区分の指定により下記となります  </p>  <p style='padding-left:20px;'>1：振込申請受付日　第1ソート：振込申請日昇順　第２ソート：振込申請番号昇順</p>  <p style='padding-left:20px;'>2：振込指定日　　　第1ソート：振込指定日昇順　第２ソート：振込申請番号昇順</p>   <p style='padding-left:20px;'>※振込照会対象期間区分の指定がない場合は、1：振込申請受付日と同じとします</p> </div> <div style='width:600px; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>対象期間</p>   <div style='display:table; margin-left:20px; background-color:#29659b;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff;'>日本語名</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9312;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9313;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9314;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9315;</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間From</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間To</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div> </div> <div style='margin:10px;'>   <ul>     <li style='list-style-type:none;'>&#9312;の場合　当日分の明細を返却</li>     <li style='list-style-type:none;'>&#9313;の場合　対象期間From　～　当日までの明細を返却</li>     <li style='list-style-type:none;'>&#9314;の場合　取引初回　～　対象期間Toまでの明細を返却</li>     <li style='list-style-type:none;'>&#9315;の場合　対象期間From　～　対象期間Toまでの明細を返却</li>   </ul> </div> <div style='margin-bottom:40px;' /> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象ステータス</p>   <p style='padding-left:20px;'>申請中以降のステータスで照会が可能となります</p>   <p style='padding-left:20px;'>依頼中、作成中の状態は照会対象外です</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象となる明細</p>   <p style='padding-left:20px;'>振込・振替・およびその予約の履歴と状況が照会対象となります（APIからの依頼結果のみではありません）</p>   <p style='padding-left:20px;'>定額自動振込契約によって自動登録された振込は照会対象となります</p>   <p style='padding-left:20px;'>定額自動振込契約の申請状態と状況は対象外となります</p> </div>   # noqa: E501
+        <p>仕向の振込状況および履歴を照会します</p> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>詳細説明</h4> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>取得上限件数</p>   <p style='padding-left:20px;'>500件</p>   <p style='padding-left:20px;'>取得できる明細数が500に満たないときは取得できる明細のみを返却します</p>   <p style='padding-left:20px;'>取得できる明細が存在しない場合は「200：OK」とし明細を返却しません</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ページング</p>   <p style='padding-left:20px;'>2ページ目以降を照会する際は、初回と同じリクエスト内容に、初回レスポンスの次明細キーを追加してリクエストしてください</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>ソート順</p>   <p style='padding-left:20px;'>振込照会対象期間区分の指定により下記となります  </p>  <p style='padding-left:20px;'>1：振込申請受付日　第1ソート：振込申請日昇順　第２ソート：振込申請番号昇順</p>  <p style='padding-left:20px;'>2：振込指定日　　　第1ソート：振込指定日昇順　第２ソート：振込申請番号昇順</p>   <p style='padding-left:20px;'>※振込照会対象期間区分の指定がない場合は、1：振込申請受付日と同じとします</p> </div> <div style='width:600px; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>対象期間</p>   <div style='display:table; margin-left:20px; background-color:#29659b;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff;'>日本語名</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9312;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9313;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9314;</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; text-align:center; font-size:120%; color:#fff;'>&#9315;</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間From</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div>   <div style='display:table; margin-left:20px;'>     <div style='display:table-cell; width:160px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>対象期間To</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>×</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>     <div style='display:table-cell; width:80px; padding:9px; border:1px solid #fff; background-color:#f8f8f8; font-size:120%; text-align:center;'>○</div>   </div> </div> <div style='margin:10px;'>   <ul>     <li style='list-style-type:none;'>&#9312;の場合　当日分の明細を返却</li>     <li style='list-style-type:none;'>&#9313;の場合　対象期間From　～　当日までの明細を返却</li>     <li style='list-style-type:none;'>&#9314;の場合　取引初回　～　対象期間Toまでの明細を返却</li>     <li style='list-style-type:none;'>&#9315;の場合　対象期間From　～　対象期間Toまでの明細を返却</li>   </ul> </div> <div style='margin-bottom:40px;' /> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象ステータス</p>   <p style='padding-left:20px;'>申請中以降のステータスで照会が可能となります</p>   <p style='padding-left:20px;'>依頼中、作成中の状態は照会対象外です</p> </div> <div style='margin:10px;'>   <p style='font-weight:bold; color:#616161;'>照会対象となる明細</p>   <p style='padding-left:20px;'>振込・振替・およびその予約の履歴と状況が照会対象となります（APIからの依頼結果のみではありません）</p>   <p style='padding-left:20px;'>定額自動振込契約によって自動登録された振込は照会対象となります</p>   <p style='padding-left:20px;'>定額自動振込契約の申請状態と状況は対象外となります</p>   <p style='padding-left:20px;'>ビジネスIDをご利用のお客様で振込申請者が実施した振込申請の取下は、申請者およびマスター権限を有したユーザーのみが照会可能となります</p> </div>   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.transfer_status_using_get_with_http_info(account_id, query_key_class, x_access_token, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str account_id: 口座ID 半角数字 口座を識別するID  minLength: 12 maxLength: 29  (required)
-        :param str query_key_class: 照会対象キー区分 半角数字 照会対象のキー 1：振込申請照会対象指定、2：振込一括照会対象指定  minLength: 1 maxLength: 1  (required)
-        :param str x_access_token: アクセストークン  minLength: 1 maxLength: 128  (required)
-        :param str apply_no: 受付番号（振込申請番号） 半角数字 照会対象の番号を設定 照会対象キー区分が、1のときは必須 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）  minLength: 16 maxLength: 16 
-        :param str date_from: 対象期間From 半角文字 YYYY-MM-DD形式 照会対象キー区分が、2のときは入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）  minLength: 10 maxLength: 10 
-        :param str date_to: 対象期間To 半角文字 YYYY-MM-DD形式 照会対象キー区分が、2のときは入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 対象期間Fromと対象期間Toを指定する場合は、対象期間From≦対象期間Toとし、それ以外は「400 Bad Request」を返却  minLength: 10 maxLength: 10 
-        :param str next_item_key: 次明細キー 半角数字 照会対象キー区分が、2のときは入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）              minLength: 1 maxLength: 24 
-        :param list[str] request_transfer_status: 照会対象ステータス  半角数字  2:申請中、3:差戻、4:取下げ、5:期限切れ、8:承認取消/予約取消、  11:予約中、12:手続中、13:リトライ中、  20:手続済、22:資金返却、24:組戻手続中、25:組戻済、26:組戻不成立、  40:手続不成立  照会対象キー区分が、2のときは設定可  それ以外は設定しません（値が設定されている場合は、「400 Bad Request」を返却）  配列のため、複数設定した場合は対象のステータスをOR条件で検索します  省略した場合は全てを設定したものとみなします  minLength: 1 maxLength: 3 
-        :param str request_transfer_class: 振込照会対象取得区分 半角数字 1：ALL、2：振込申請のみ、3：振込受付情報のみ 照会対象キー区分が2かつ、ビジネスID管理利用中の場合のときのみ入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 照会対象キー区分が、2のときに指定しない場合は1と扱います  minLength: 1 maxLength: 1 
-        :param str request_transfer_term: 振込照会対象期間区分 半角数字 対象期間Fromと対象期間Toで指定する日付の区分 1：振込申請受付日　2：振込指定日 照会対象キー区分が2のときのみ入力可 それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却） 照会対象キー区分が、2のときに指定しない場合は1と扱います  minLength: 1 maxLength: 1 
+        :param str account_id: 口座ID<br>半角数字<br>口座を識別するID (required)
+        :param str query_key_class: 照会対象キー区分<br>半角数字<br>照会対象のキー<br>1：振込申請照会対象指定、2：振込一括照会対象指定 (required)
+        :param str x_access_token: アクセストークン (required)
+        :param str apply_no: 受付番号（振込申請番号）<br>半角数字<br>照会対象の番号を設定<br>照会対象キー区分が、1のときは必須<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）
+        :param str date_from: 対象期間From<br>半角文字<br>YYYY-MM-DD形式<br>照会対象キー区分が、2のときは入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）
+        :param str date_to: 対象期間To<br>半角文字<br>YYYY-MM-DD形式<br>照会対象キー区分が、2のときは入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>対象期間Fromと対象期間Toを指定する場合は、対象期間From≦対象期間Toとし、それ以外は「400 Bad Request」を返却
+        :param str next_item_key: 次明細キー<br>半角数字<br>照会対象キー区分が、2のときは入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）
+        :param list[str] request_transfer_status: 照会対象ステータス<br> 半角数字<br> 2:申請中、3:差戻、4:取下げ、5:期限切れ、8:承認取消/予約取消、<br> 11:予約中、12:手続中、13:リトライ中、<br> 20:手続済、22:資金返却、24:組戻手続中、25:組戻済、26:組戻不成立、<br> 40:手続不成立<br> 照会対象キー区分が、2のときは設定可<br> それ以外は設定しません（値が設定されている場合は、「400 Bad Request」を返却）<br> 配列のため、複数設定した場合は対象のステータスをOR条件で検索します<br> 省略した場合は全てを設定したものとみなします
+        :param str request_transfer_class: 振込照会対象取得区分<br>半角数字<br>1：ALL、2：振込申請のみ、3：振込受付情報のみ<br>照会対象キー区分が2かつ、ビジネスID管理利用中の場合のときのみ入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>照会対象キー区分が、2のときに指定しない場合は1と扱います
+        :param str request_transfer_term: 振込照会対象期間区分<br>半角数字<br>対象期間Fromと対象期間Toで指定する日付の区分<br>1：振込申請受付日　2：振込指定日<br>照会対象キー区分が2のときのみ入力可<br>それ以外はNULLを設定（値が設定されている場合は、「400 Bad Request」を返却）<br>照会対象キー区分が、2のときに指定しない場合は1と扱います
         :return: TransferStatusResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -588,10 +587,6 @@ class TransferApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json;charset=UTF-8'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json;charset=UTF-8'])  # noqa: E501
 
         # Authentication setting

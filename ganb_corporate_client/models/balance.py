@@ -3,26 +3,23 @@
 """
     GMO Aozora Net Bank Open API
 
-    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/business/service/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
+    <p>オープンAPI仕様書（PDF版）は下記リンクをご参照ください</p> <div>   <div style='display:inline-block;'><a style='text-decoration:none; font-weight:bold; color:#00b8d4;' href='https://gmo-aozora.com/api-cooperation/api-specification.html' target='_blank'>オープンAPI仕様書</a></div><div style='display:inline-block; margin-left:2px; left:2px; width:10px; height:10px; border-top:2px solid #00b8d4; border-right:2px solid #00b8d4; transparent;-webkit-transform:rotate(45deg); transform: rotate(45deg);'></div> </div> <h4 style='margin-top:30px; border-left: solid 4px #1B2F48; padding: 0.1em 0.5em; color:#1B2F48;'>共通仕様</h4> <div style='width:100%; margin:10px;'>   <p style='font-weight:bold; color:#616161;'>＜HTTPリクエストヘッダ＞</p>   <div style='display:table; margin-left:10px; background-color:#29659b;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff;'>項目</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; color:#fff;'>仕様</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>プロトコル</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>HTTP1.1/HTTPS</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>charset</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>UTF-8</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>content-type</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>application/json</div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>domain_name</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       本番環境：api.gmo-aozora.com</br>       開発環境：stg-api.gmo-aozora.com     </div>   </div>   <div style='display:table; margin-left:10px;'>     <div style='display:table-cell; min-width:130px; padding:9px; border:1px solid #fff; color:#fff; background-color:#29659b;'>メインURL</div>     <div style='display:table-cell; width:85%; padding:9px; border:1px solid #fff; background-color:#f8f8f8;'>       https://{domain_name}/ganb/api/corporation/{version}</br>       <span style='border-bottom:solid 1px;'>Version:1.x.x</span> の場合</br>       　https://api.gmo-aozora.com/ganb/api/corporation/<span style='border-bottom:solid 1px;'>v1</span>     </div>   </div> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜リクエスト共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <p style='padding-left:40px;'>パラメータの値が空の場合、またはパラメータ自体が設定されていない場合、どちらもNULLとして扱います</p> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜レスポンス共通仕様＞</p>   <p style='padding-left:20px; font-weight:bold; color:#616161;'>NULLデータの扱い</p>   <ul>     <li>レスポンスデータ</li>       <ul>         <li style='list-style-type:none;'>レスポンスデータの値が空の場合または、レスポンスデータ自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>     <li>配列</li>       <ul>         <li style='list-style-type:none;'>配列の要素の値が空の場合は「空のリスト」と記載</li>         <li style='list-style-type:none;'>配列自体が設定されない場合は「項目自体を設定しません」と記載</li>       </ul>   </ul> </div> <div style='margin:20px 10px;'>   <p style='font-weight:bold; color:#616161;'>＜更新系APIに関する注意事項＞</p>   <ul>     <li style='list-style-type:none;'>更新系処理がタイムアウトとなった場合、処理自体は実行されている可能性がありますので、</li>     <li style='list-style-type:none;'>再実行を行う必要がある場合は必ず照会系の処理で実行状況を確認してから再実行を行ってください</li>   </ul> </div>   # noqa: E501
 
-    OpenAPI spec version: 1.1.12
+    OpenAPI spec version: 1.15.0
     
     Generated by: https://github.com/swagger-api/swagger-codegen.git
 """
-
 
 import pprint
 import re  # noqa: F401
 
 import six
 
-
 class Balance(object):
     """NOTE: This class is auto generated by the swagger code generator program.
 
     Do not edit the class manually.
     """
-
     """
     Attributes:
       swagger_types (dict): The key is attribute name
@@ -70,7 +67,6 @@ class Balance(object):
 
     def __init__(self, account_id=None, account_type_code=None, account_type_name=None, balance=None, base_date=None, base_time=None, withdrawable_amount=None, previous_day_balance=None, previous_month_balance=None, currency_code=None, currency_name=None, fcy_total_balance=None, ttb=None, base_rate_date=None, base_rate_time=None, yen_equivalent=None):  # noqa: E501
         """Balance - a model defined in Swagger"""  # noqa: E501
-
         self._account_id = None
         self._account_type_code = None
         self._account_type_name = None
@@ -88,7 +84,6 @@ class Balance(object):
         self._base_rate_time = None
         self._yen_equivalent = None
         self.discriminator = None
-
         self.account_id = account_id
         self.account_type_code = account_type_code
         self.account_type_name = account_type_name
@@ -119,7 +114,7 @@ class Balance(object):
     def account_id(self):
         """Gets the account_id of this Balance.  # noqa: E501
 
-        口座ID 半角英数字 口座を識別するID   # noqa: E501
+        口座ID<br>半角英数字<br>口座を識別するID<br>  # noqa: E501
 
         :return: The account_id of this Balance.  # noqa: E501
         :rtype: str
@@ -130,17 +125,13 @@ class Balance(object):
     def account_id(self, account_id):
         """Sets the account_id of this Balance.
 
-        口座ID 半角英数字 口座を識別するID   # noqa: E501
+        口座ID<br>半角英数字<br>口座を識別するID<br>  # noqa: E501
 
         :param account_id: The account_id of this Balance.  # noqa: E501
         :type: str
         """
         if account_id is None:
             raise ValueError("Invalid value for `account_id`, must not be `None`")  # noqa: E501
-        if account_id is not None and len(account_id) > 29:
-            raise ValueError("Invalid value for `account_id`, length must be less than or equal to `29`")  # noqa: E501
-        if account_id is not None and len(account_id) < 12:
-            raise ValueError("Invalid value for `account_id`, length must be greater than or equal to `12`")  # noqa: E501
 
         self._account_id = account_id
 
@@ -148,7 +139,7 @@ class Balance(object):
     def account_type_code(self):
         """Gets the account_type_code of this Balance.  # noqa: E501
 
-        科目コード 半角数字 ・01=普通預金（有利息） ・02=普通預金（決済用） ・11=円定期預金 ・51=外貨普通預金 ・81=証券コネクト口座   # noqa: E501
+        科目コード<br>半角数字<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>・11=円定期預金<br>・51=外貨普通預金<br>・81=証券コネクト口座<br>  # noqa: E501
 
         :return: The account_type_code of this Balance.  # noqa: E501
         :rtype: str
@@ -159,17 +150,13 @@ class Balance(object):
     def account_type_code(self, account_type_code):
         """Sets the account_type_code of this Balance.
 
-        科目コード 半角数字 ・01=普通預金（有利息） ・02=普通預金（決済用） ・11=円定期預金 ・51=外貨普通預金 ・81=証券コネクト口座   # noqa: E501
+        科目コード<br>半角数字<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>・11=円定期預金<br>・51=外貨普通預金<br>・81=証券コネクト口座<br>  # noqa: E501
 
         :param account_type_code: The account_type_code of this Balance.  # noqa: E501
         :type: str
         """
         if account_type_code is None:
             raise ValueError("Invalid value for `account_type_code`, must not be `None`")  # noqa: E501
-        if account_type_code is not None and len(account_type_code) > 2:
-            raise ValueError("Invalid value for `account_type_code`, length must be less than or equal to `2`")  # noqa: E501
-        if account_type_code is not None and len(account_type_code) < 2:
-            raise ValueError("Invalid value for `account_type_code`, length must be greater than or equal to `2`")  # noqa: E501
 
         self._account_type_code = account_type_code
 
@@ -177,7 +164,7 @@ class Balance(object):
     def account_type_name(self):
         """Gets the account_type_name of this Balance.  # noqa: E501
 
-        科目名 全角文字 科目コードの名称   # noqa: E501
+        科目名<br>全角文字<br>科目コードの名称<br>  # noqa: E501
 
         :return: The account_type_name of this Balance.  # noqa: E501
         :rtype: str
@@ -188,17 +175,13 @@ class Balance(object):
     def account_type_name(self, account_type_name):
         """Sets the account_type_name of this Balance.
 
-        科目名 全角文字 科目コードの名称   # noqa: E501
+        科目名<br>全角文字<br>科目コードの名称<br>  # noqa: E501
 
         :param account_type_name: The account_type_name of this Balance.  # noqa: E501
         :type: str
         """
         if account_type_name is None:
             raise ValueError("Invalid value for `account_type_name`, must not be `None`")  # noqa: E501
-        if account_type_name is not None and len(account_type_name) > 10:
-            raise ValueError("Invalid value for `account_type_name`, length must be less than or equal to `10`")  # noqa: E501
-        if account_type_name is not None and len(account_type_name) < 1:
-            raise ValueError("Invalid value for `account_type_name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._account_type_name = account_type_name
 
@@ -206,7 +189,7 @@ class Balance(object):
     def balance(self):
         """Gets the balance of this Balance.  # noqa: E501
 
-        現在残高 半角数字　マイナス含む 基準日時における現在残高 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用） ・11=円定期預金 ・81=証券コネクト口座   # noqa: E501
+        現在残高<br>半角数字　マイナス含む<br>基準日時における現在残高<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>・11=円定期預金<br>・81=証券コネクト口座<br>  # noqa: E501
 
         :return: The balance of this Balance.  # noqa: E501
         :rtype: str
@@ -217,15 +200,11 @@ class Balance(object):
     def balance(self, balance):
         """Sets the balance of this Balance.
 
-        現在残高 半角数字　マイナス含む 基準日時における現在残高 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用） ・11=円定期預金 ・81=証券コネクト口座   # noqa: E501
+        現在残高<br>半角数字　マイナス含む<br>基準日時における現在残高<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>・11=円定期預金<br>・81=証券コネクト口座<br>  # noqa: E501
 
         :param balance: The balance of this Balance.  # noqa: E501
         :type: str
         """
-        if balance is not None and len(balance) > 20:
-            raise ValueError("Invalid value for `balance`, length must be less than or equal to `20`")  # noqa: E501
-        if balance is not None and len(balance) < 1:
-            raise ValueError("Invalid value for `balance`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._balance = balance
 
@@ -233,7 +212,7 @@ class Balance(object):
     def base_date(self):
         """Gets the base_date of this Balance.  # noqa: E501
 
-        基準日 半角文字 残高および引出可能額を照会した基準日を示します YYYY-MM-DD形式   # noqa: E501
+        基準日<br>半角文字<br>残高および引出可能額を照会した基準日を示します<br>YYYY-MM-DD形式<br>  # noqa: E501
 
         :return: The base_date of this Balance.  # noqa: E501
         :rtype: str
@@ -244,17 +223,13 @@ class Balance(object):
     def base_date(self, base_date):
         """Sets the base_date of this Balance.
 
-        基準日 半角文字 残高および引出可能額を照会した基準日を示します YYYY-MM-DD形式   # noqa: E501
+        基準日<br>半角文字<br>残高および引出可能額を照会した基準日を示します<br>YYYY-MM-DD形式<br>  # noqa: E501
 
         :param base_date: The base_date of this Balance.  # noqa: E501
         :type: str
         """
         if base_date is None:
             raise ValueError("Invalid value for `base_date`, must not be `None`")  # noqa: E501
-        if base_date is not None and len(base_date) > 10:
-            raise ValueError("Invalid value for `base_date`, length must be less than or equal to `10`")  # noqa: E501
-        if base_date is not None and len(base_date) < 10:
-            raise ValueError("Invalid value for `base_date`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._base_date = base_date
 
@@ -262,7 +237,7 @@ class Balance(object):
     def base_time(self):
         """Gets the base_time of this Balance.  # noqa: E501
 
-        基準時刻 半角文字 残高および引出可能額を照会した基準時刻を示します HH:MM:SS+09:00形式   # noqa: E501
+        基準時刻<br>半角文字<br>残高および引出可能額を照会した基準時刻を示します<br>HH:MM:SS+09:00形式<br>  # noqa: E501
 
         :return: The base_time of this Balance.  # noqa: E501
         :rtype: str
@@ -273,17 +248,13 @@ class Balance(object):
     def base_time(self, base_time):
         """Sets the base_time of this Balance.
 
-        基準時刻 半角文字 残高および引出可能額を照会した基準時刻を示します HH:MM:SS+09:00形式   # noqa: E501
+        基準時刻<br>半角文字<br>残高および引出可能額を照会した基準時刻を示します<br>HH:MM:SS+09:00形式<br>  # noqa: E501
 
         :param base_time: The base_time of this Balance.  # noqa: E501
         :type: str
         """
         if base_time is None:
             raise ValueError("Invalid value for `base_time`, must not be `None`")  # noqa: E501
-        if base_time is not None and len(base_time) > 14:
-            raise ValueError("Invalid value for `base_time`, length must be less than or equal to `14`")  # noqa: E501
-        if base_time is not None and len(base_time) < 14:
-            raise ValueError("Invalid value for `base_time`, length must be greater than or equal to `14`")  # noqa: E501
 
         self._base_time = base_time
 
@@ -291,7 +262,7 @@ class Balance(object):
     def withdrawable_amount(self):
         """Gets the withdrawable_amount of this Balance.  # noqa: E501
 
-        支払可能残高 半角数字　マイナス含む 応答時点での引出可能額を示します 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        支払可能残高<br>半角数字　マイナス含む<br>応答時点での引出可能額を示します<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :return: The withdrawable_amount of this Balance.  # noqa: E501
         :rtype: str
@@ -302,15 +273,11 @@ class Balance(object):
     def withdrawable_amount(self, withdrawable_amount):
         """Sets the withdrawable_amount of this Balance.
 
-        支払可能残高 半角数字　マイナス含む 応答時点での引出可能額を示します 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        支払可能残高<br>半角数字　マイナス含む<br>応答時点での引出可能額を示します<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :param withdrawable_amount: The withdrawable_amount of this Balance.  # noqa: E501
         :type: str
         """
-        if withdrawable_amount is not None and len(withdrawable_amount) > 20:
-            raise ValueError("Invalid value for `withdrawable_amount`, length must be less than or equal to `20`")  # noqa: E501
-        if withdrawable_amount is not None and len(withdrawable_amount) < 1:
-            raise ValueError("Invalid value for `withdrawable_amount`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._withdrawable_amount = withdrawable_amount
 
@@ -318,7 +285,7 @@ class Balance(object):
     def previous_day_balance(self):
         """Gets the previous_day_balance of this Balance.  # noqa: E501
 
-        前日残高 半角数字　マイナス含む 日付が変わった直後は、銀行の締め処理が終わるまでは前々日の残高となります 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        前日残高<br>半角数字　マイナス含む<br>日付が変わった直後は、銀行の締め処理が終わるまでは前々日の残高となります<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :return: The previous_day_balance of this Balance.  # noqa: E501
         :rtype: str
@@ -329,15 +296,11 @@ class Balance(object):
     def previous_day_balance(self, previous_day_balance):
         """Sets the previous_day_balance of this Balance.
 
-        前日残高 半角数字　マイナス含む 日付が変わった直後は、銀行の締め処理が終わるまでは前々日の残高となります 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        前日残高<br>半角数字　マイナス含む<br>日付が変わった直後は、銀行の締め処理が終わるまでは前々日の残高となります<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :param previous_day_balance: The previous_day_balance of this Balance.  # noqa: E501
         :type: str
         """
-        if previous_day_balance is not None and len(previous_day_balance) > 20:
-            raise ValueError("Invalid value for `previous_day_balance`, length must be less than or equal to `20`")  # noqa: E501
-        if previous_day_balance is not None and len(previous_day_balance) < 1:
-            raise ValueError("Invalid value for `previous_day_balance`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._previous_day_balance = previous_day_balance
 
@@ -345,7 +308,7 @@ class Balance(object):
     def previous_month_balance(self):
         """Gets the previous_month_balance of this Balance.  # noqa: E501
 
-        前月末残高 半角数字　マイナス含む 月が変わった直後は、銀行の締め処理が終わるまでは前々月の残高となります  科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        前月末残高<br>半角数字　マイナス含む<br>月が変わった直後は、銀行の締め処理が終わるまでは前々月の残高となります<br> 科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :return: The previous_month_balance of this Balance.  # noqa: E501
         :rtype: str
@@ -356,15 +319,11 @@ class Balance(object):
     def previous_month_balance(self, previous_month_balance):
         """Sets the previous_month_balance of this Balance.
 
-        前月末残高 半角数字　マイナス含む 月が変わった直後は、銀行の締め処理が終わるまでは前々月の残高となります  科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・01=普通預金（有利息） ・02=普通預金（決済用）   # noqa: E501
+        前月末残高<br>半角数字　マイナス含む<br>月が変わった直後は、銀行の締め処理が終わるまでは前々月の残高となります<br> 科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・01=普通預金（有利息）<br>・02=普通預金（決済用）<br>  # noqa: E501
 
         :param previous_month_balance: The previous_month_balance of this Balance.  # noqa: E501
         :type: str
         """
-        if previous_month_balance is not None and len(previous_month_balance) > 20:
-            raise ValueError("Invalid value for `previous_month_balance`, length must be less than or equal to `20`")  # noqa: E501
-        if previous_month_balance is not None and len(previous_month_balance) < 1:
-            raise ValueError("Invalid value for `previous_month_balance`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._previous_month_balance = previous_month_balance
 
@@ -372,7 +331,7 @@ class Balance(object):
     def currency_code(self):
         """Gets the currency_code of this Balance.  # noqa: E501
 
-        通貨コード 半角文字 ISO4217に準拠した通貨コード   # noqa: E501
+        通貨コード<br>半角文字<br>ISO4217に準拠した通貨コード<br>  # noqa: E501
 
         :return: The currency_code of this Balance.  # noqa: E501
         :rtype: str
@@ -383,17 +342,13 @@ class Balance(object):
     def currency_code(self, currency_code):
         """Sets the currency_code of this Balance.
 
-        通貨コード 半角文字 ISO4217に準拠した通貨コード   # noqa: E501
+        通貨コード<br>半角文字<br>ISO4217に準拠した通貨コード<br>  # noqa: E501
 
         :param currency_code: The currency_code of this Balance.  # noqa: E501
         :type: str
         """
         if currency_code is None:
             raise ValueError("Invalid value for `currency_code`, must not be `None`")  # noqa: E501
-        if currency_code is not None and len(currency_code) > 3:
-            raise ValueError("Invalid value for `currency_code`, length must be less than or equal to `3`")  # noqa: E501
-        if currency_code is not None and len(currency_code) < 3:
-            raise ValueError("Invalid value for `currency_code`, length must be greater than or equal to `3`")  # noqa: E501
 
         self._currency_code = currency_code
 
@@ -401,7 +356,7 @@ class Balance(object):
     def currency_name(self):
         """Gets the currency_name of this Balance.  # noqa: E501
 
-        通貨名 全角文字 ISO4217に準拠した通貨コードの当行での名称   # noqa: E501
+        通貨名<br>全角文字<br>ISO4217に準拠した通貨コードの当行での名称<br>  # noqa: E501
 
         :return: The currency_name of this Balance.  # noqa: E501
         :rtype: str
@@ -412,17 +367,13 @@ class Balance(object):
     def currency_name(self, currency_name):
         """Sets the currency_name of this Balance.
 
-        通貨名 全角文字 ISO4217に準拠した通貨コードの当行での名称   # noqa: E501
+        通貨名<br>全角文字<br>ISO4217に準拠した通貨コードの当行での名称<br>  # noqa: E501
 
         :param currency_name: The currency_name of this Balance.  # noqa: E501
         :type: str
         """
         if currency_name is None:
             raise ValueError("Invalid value for `currency_name`, must not be `None`")  # noqa: E501
-        if currency_name is not None and len(currency_name) > 10:
-            raise ValueError("Invalid value for `currency_name`, length must be less than or equal to `10`")  # noqa: E501
-        if currency_name is not None and len(currency_name) < 1:
-            raise ValueError("Invalid value for `currency_name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._currency_name = currency_name
 
@@ -430,7 +381,7 @@ class Balance(object):
     def fcy_total_balance(self):
         """Gets the fcy_total_balance of this Balance.  # noqa: E501
 
-        外貨残高 半角数字　少数点および小数部最大3桁　マイナス含む 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨残高<br>半角数字　少数点および小数部最大3桁　マイナス含む<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :return: The fcy_total_balance of this Balance.  # noqa: E501
         :rtype: str
@@ -441,15 +392,11 @@ class Balance(object):
     def fcy_total_balance(self, fcy_total_balance):
         """Sets the fcy_total_balance of this Balance.
 
-        外貨残高 半角数字　少数点および小数部最大3桁　マイナス含む 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨残高<br>半角数字　少数点および小数部最大3桁　マイナス含む<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :param fcy_total_balance: The fcy_total_balance of this Balance.  # noqa: E501
         :type: str
         """
-        if fcy_total_balance is not None and len(fcy_total_balance) > 20:
-            raise ValueError("Invalid value for `fcy_total_balance`, length must be less than or equal to `20`")  # noqa: E501
-        if fcy_total_balance is not None and len(fcy_total_balance) < 3:
-            raise ValueError("Invalid value for `fcy_total_balance`, length must be greater than or equal to `3`")  # noqa: E501
 
         self._fcy_total_balance = fcy_total_balance
 
@@ -457,7 +404,7 @@ class Balance(object):
     def ttb(self):
         """Gets the ttb of this Balance.  # noqa: E501
 
-        外貨レート 半角数字　少数点および小数部最大3桁　マイナス含む 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨レート<br>半角数字　少数点および小数部最大3桁　マイナス含む<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :return: The ttb of this Balance.  # noqa: E501
         :rtype: str
@@ -468,15 +415,11 @@ class Balance(object):
     def ttb(self, ttb):
         """Sets the ttb of this Balance.
 
-        外貨レート 半角数字　少数点および小数部最大3桁　マイナス含む 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨レート<br>半角数字　少数点および小数部最大3桁　マイナス含む<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :param ttb: The ttb of this Balance.  # noqa: E501
         :type: str
         """
-        if ttb is not None and len(ttb) > 20:
-            raise ValueError("Invalid value for `ttb`, length must be less than or equal to `20`")  # noqa: E501
-        if ttb is not None and len(ttb) < 3:
-            raise ValueError("Invalid value for `ttb`, length must be greater than or equal to `3`")  # noqa: E501
 
         self._ttb = ttb
 
@@ -484,7 +427,7 @@ class Balance(object):
     def base_rate_date(self):
         """Gets the base_rate_date of this Balance.  # noqa: E501
 
-        外貨レート基準日 半角文字 外貨レートの基準日を示します YYYY-MM-DD形式 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨レート基準日<br>半角文字<br>外貨レートの基準日を示します<br>YYYY-MM-DD形式<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :return: The base_rate_date of this Balance.  # noqa: E501
         :rtype: str
@@ -495,15 +438,11 @@ class Balance(object):
     def base_rate_date(self, base_rate_date):
         """Sets the base_rate_date of this Balance.
 
-        外貨レート基準日 半角文字 外貨レートの基準日を示します YYYY-MM-DD形式 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨レート基準日<br>半角文字<br>外貨レートの基準日を示します<br>YYYY-MM-DD形式<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :param base_rate_date: The base_rate_date of this Balance.  # noqa: E501
         :type: str
         """
-        if base_rate_date is not None and len(base_rate_date) > 10:
-            raise ValueError("Invalid value for `base_rate_date`, length must be less than or equal to `10`")  # noqa: E501
-        if base_rate_date is not None and len(base_rate_date) < 10:
-            raise ValueError("Invalid value for `base_rate_date`, length must be greater than or equal to `10`")  # noqa: E501
 
         self._base_rate_date = base_rate_date
 
@@ -511,7 +450,7 @@ class Balance(object):
     def base_rate_time(self):
         """Gets the base_rate_time of this Balance.  # noqa: E501
 
-        外貨レート基準時刻 半角文字 外貨レートの基準時刻を示します HH:MM:SS+09:00形式 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨レート基準時刻<br>半角文字<br>外貨レートの基準時刻を示します<br>HH:MM:SS+09:00形式<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :return: The base_rate_time of this Balance.  # noqa: E501
         :rtype: str
@@ -522,15 +461,11 @@ class Balance(object):
     def base_rate_time(self, base_rate_time):
         """Sets the base_rate_time of this Balance.
 
-        外貨レート基準時刻 半角文字 外貨レートの基準時刻を示します HH:MM:SS+09:00形式 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨レート基準時刻<br>半角文字<br>外貨レートの基準時刻を示します<br>HH:MM:SS+09:00形式<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :param base_rate_time: The base_rate_time of this Balance.  # noqa: E501
         :type: str
         """
-        if base_rate_time is not None and len(base_rate_time) > 14:
-            raise ValueError("Invalid value for `base_rate_time`, length must be less than or equal to `14`")  # noqa: E501
-        if base_rate_time is not None and len(base_rate_time) < 14:
-            raise ValueError("Invalid value for `base_rate_time`, length must be greater than or equal to `14`")  # noqa: E501
 
         self._base_rate_time = base_rate_time
 
@@ -538,7 +473,7 @@ class Balance(object):
     def yen_equivalent(self):
         """Gets the yen_equivalent of this Balance.  # noqa: E501
 
-        外貨円換算額 半角数字　マイナス含む 外貨残高を円に換算した額 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨円換算額<br>半角数字　マイナス含む<br>外貨残高を円に換算した額<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :return: The yen_equivalent of this Balance.  # noqa: E501
         :rtype: str
@@ -549,15 +484,11 @@ class Balance(object):
     def yen_equivalent(self, yen_equivalent):
         """Sets the yen_equivalent of this Balance.
 
-        外貨円換算額 半角数字　マイナス含む 外貨残高を円に換算した額 科目コードが以下の場合のみ設定されます 該当しない場合は項目自体を設定しません ・51=外貨普通預金   # noqa: E501
+        外貨円換算額<br>半角数字　マイナス含む<br>外貨残高を円に換算した額<br>科目コードが以下の場合のみ設定されます<br>該当しない場合は項目自体を設定しません<br>・51=外貨普通預金<br>  # noqa: E501
 
         :param yen_equivalent: The yen_equivalent of this Balance.  # noqa: E501
         :type: str
         """
-        if yen_equivalent is not None and len(yen_equivalent) > 20:
-            raise ValueError("Invalid value for `yen_equivalent`, length must be less than or equal to `20`")  # noqa: E501
-        if yen_equivalent is not None and len(yen_equivalent) < 1:
-            raise ValueError("Invalid value for `yen_equivalent`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._yen_equivalent = yen_equivalent
 
